@@ -29,7 +29,7 @@ const CalendarComponent=(props)=> {
          const {dateString}=day;
          const storeKeys=await AsyncStorage.getAllKeys()
          if(storeKeys.includes(dateString)){
-            props.navigation.navigate("Events",{day})
+            props.navigation.navigate("Events",{day,markedData:data})
          }else{
             props.navigation.navigate("Notes",{day})
          }  
